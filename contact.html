@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="新源县绿牧农牧业开发科技有限公司 - 专业从事畜牧养殖、特色养殖、饲草种植、乳品加工、冷链物流、市场销售的现代化农牧业企业">
+    <meta name="description" content="新源县绿牧农牧业开发科技有限公司 - 专业从事畜牧养殖、特色养殖、饲草种植、乳品加工、冷链物流、市场销售的现代化农牧业企业">
     <meta name="keywords" content="绿牧农牧，新源县，畜牧养殖，特色养殖，饲草种植，乳品加工，冷链物流，农牧业，新疆，伊犁">
     <meta name="author" content="新源县绿牧农牧业开发科技有限公司">
     <meta name="robots" content="index, follow">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <title>联系我们 - 新源县绿牧农牧业开发科技有限公司</title>
@@ -207,15 +207,29 @@
             margin-bottom: 30px;
         }
 
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
         .map-placeholder {
-            height: 400px;
+            height: 450px;
             background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
             border-radius: 15px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 80px;
             color: #2e7d32;
+        }
+
+        .map-placeholder p {
+            font-size: 16px;
+            margin-top: 15px;
+            color: #666;
         }
 
         .footer {
@@ -271,15 +285,29 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
+            .map-container {
+                height: 300px;
+            }
+
+            .map-placeholder {
+                height: 300px;
+            }
         }
     </style>
-    <!-- 高德地图 -->
-    <script type="text/javascript">
-        window._AMapSecurityConfig = {
-            securityJsCode: 'YOUR_AMAP_SECURITY_CODE'
-        };
-    </script>
-    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=YOUR_AMAP_KEY"></script>
+    <!-- 百度地图 -->
+    <!-- 
+    百度地图配置说明：
+    1. 访问 https://lbsyun.baidu.com/ 注册账号
+    2. 进入控制台 → 应用管理 → 我的应用
+    3. 点击"创建应用"
+    4. 应用名称：绿牧农牧官网
+    5. 应用类型：选择"浏览器端"
+    6. Referer 白名单：填写 "*" (测试用) 或 "lvmu0999.github.io" (生产环境)
+    7. 获取 AK (Access Key)
+    8. 将下方的 YOUR_BAIDU_MAP_AK 替换为你的 AK
+    -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=qVnRhkjl0Yh8CZr1efxKfFHtgkG2s0rz"></script>
 </head>
 <body>
     <a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.zIndex='10000';this.style.background='#2e7d32';this.style.color='white';this.style.padding='10px 20px';">跳转到主要内容</a>
@@ -287,7 +315,7 @@
     <nav class="navbar">
         <a href="index.html" class="logo">🌿 绿牧农牧</a>
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()" style="display:none;background:none;border:none;font-size:24px;cursor:pointer;color:#2e7d32;" aria-label="菜单">☰</button>
-            <ul class="nav-links">
+        <ul class="nav-links">
             <li><a href="index.html">首页</a></li>
             <li><a href="about.html">关于我们</a></li>
             <li><a href="business.html">业务板块</a></li>
@@ -302,6 +330,8 @@
         <p>期待与您合作 · 共创美好未来</p>
     </header>
 
+    <!-- 主要内容 -->
+    <main id="main-content">
     <!-- 联系方式 -->
     <section class="section">
         <div class="contact-grid">
@@ -337,7 +367,6 @@
         <!-- 在线留言 -->
         <div class="contact-form-section">
             <h2>📝 在线留言</h2>
-            <!-- Netlify 表单支持 -->
             <!-- 
     Formspree 配置说明：
     1. 访问 https://formspree.io/ 注册免费账号
@@ -346,7 +375,7 @@
     4. 将下方的 YOUR_FORM_ID 替换为你的表单 ID
     5. 设置表单接收邮箱为你的邮箱 (1131680431@qq.com)
     -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" onsubmit="return handleFormspreeSubmit(event)">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" onsubmit="return handleFormspreeSubmit(event)">
                 <p style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field"></label>
                 </p>
@@ -381,18 +410,16 @@
             </form>
         </div>
 
-        <!-- 地图 -->
+        <!-- 百度地图 -->
         <div class="map-section">
-            <h2>️ 位置导航</h2>
-            <div class="map-placeholder">
-                🗺️ 地图加载中...
-            </div>
+            <h2>🗺️ 位置导航</h2>
+            <div class="map-container" id="map"></div>
             <p style="text-align: center; margin-top: 20px; color: #666;">
-                地址：新疆伊犁州新源县则克台镇工业园区
+                📍 地址：新疆伊犁州新源县则克台镇工业园区
             </p>
         </div>
     </section>
-        </main>
+    </main>
 
     <!-- 页脚 -->
     <footer class="footer">
@@ -421,7 +448,6 @@
     <!-- 表单提交处理 -->
     <script>
     function handleFormspreeSubmit(event) {
-        // Formspree 会处理表单提交，我们只需要做验证
         const form = event.target;
         const name = form.name.value.trim();
         const phone = form.phone.value.trim();
@@ -429,7 +455,6 @@
         const company = form.company.value.trim();
         const message = form.message.value.trim();
         
-        // 验证
         if (!name || !phone || !message) {
             alert('请填写必填项（姓名、电话、留言内容）');
             event.preventDefault();
@@ -448,42 +473,129 @@
             return false;
         }
         
-        // 验证通过，Formspree 会处理提交
-        // 提交后会跳转到 Formspree 的感谢页面
         return true;
     }
     </script>
     
-    <!-- 引入语音朗读脚本 -->
+    <!-- 语音朗读脚本 -->
     <script src="voice-reader.js"></script>
-<script>
-// 移动端菜单切换
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    }
-}
-
-// 显示移动端菜单按钮
-window.addEventListener('resize', () => {
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    if (window.innerWidth <= 768) {
-        if (mobileBtn) mobileBtn.style.display = 'block';
-    } else {
-        if (mobileBtn) mobileBtn.style.display = 'none';
+    
+    <!-- 移动端菜单 -->
+    <script>
+    function toggleMobileMenu() {
         const navLinks = document.querySelector('.nav-links');
-        if (navLinks) navLinks.style.display = 'flex';
+        if (navLinks) {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
     }
-});
 
-// 初始化检查
-window.addEventListener('DOMContentLoaded', () => {
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    if (window.innerWidth <= 768 && mobileBtn) {
-        mobileBtn.style.display = 'block';
+    window.addEventListener('resize', () => {
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        if (window.innerWidth <= 768) {
+            if (mobileBtn) mobileBtn.style.display = 'block';
+        } else {
+            if (mobileBtn) mobileBtn.style.display = 'none';
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) navLinks.style.display = 'flex';
+        }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        if (window.innerWidth <= 768 && mobileBtn) {
+            mobileBtn.style.display = 'block';
+        }
+        
+        // 初始化百度地图
+        initBaiduMap();
+    });
+    
+    // 百度地图初始化函数
+    function initBaiduMap() {
+        // 检查百度地图 API 是否加载
+        if (typeof BMap === 'undefined') {
+            console.log('百度地图 API 未加载，显示占位图');
+            const mapContainer = document.getElementById('map');
+            if (mapContainer) {
+                mapContainer.innerHTML = `
+                    <div class="map-placeholder">
+                        <div style="font-size: 80px;">🗺️</div>
+                        <p>地图加载中...</p>
+                        <p style="font-size: 14px; margin-top: 10px;">请先配置百度地图 AK</p>
+                    </div>
+                `;
+            }
+            return;
+        }
+        
+        try {
+            // 创建地图实例
+            var map = new BMap.Map("map");
+            
+            // 设置中心点坐标（新源县则克台镇）
+            var point = new BMap.Point(83.239, 43.429);
+            
+            // 初始化地图，设置中心点坐标和地图级别
+            map.centerAndZoom(point, 15);
+            
+            // 开启鼠标滚轮缩放
+            map.enableScrollWheelZoom(true);
+            
+            // 添加地图类型控件
+            map.addControl(new BMap.MapTypeControl({
+                mapTypes: [
+                    BMAP_NORMAL_MAP,
+                    BMAP_HYBRID_MAP
+                ]
+            }));
+            
+            // 添加比例尺控件
+            map.addControl(new BMap.ScaleControl());
+            
+            // 添加缩放控件
+            map.addControl(new BMap.NavigationControl());
+            
+            // 创建标注
+            var marker = new BMap.Marker(point);
+            map.addOverlay(marker);
+            
+            // 添加信息窗口
+            var infoWindow = new BMap.InfoWindow(
+                "<h3 style='margin:0; color:#2e7d32;'>🌿 绿牧农牧</h3>" +
+                "<p style='margin:5px 0;'>新疆伊犁州新源县则克台镇工业园区</p>" +
+                "<p style='margin:5px 0; color:#666;'>📞 0999-5036228</p>",
+                {
+                    width: 280,
+                    height: 120,
+                    title: "绿牧农牧"
+                }
+            );
+            
+            // 点击标注打开信息窗口
+            marker.addEventListener("click", function() {
+                this.openInfoWindow(infoWindow);
+            });
+            
+            // 自动打开信息窗口
+            setTimeout(function() {
+                marker.openInfoWindow(infoWindow);
+            }, 1000);
+            
+            console.log('百度地图初始化成功');
+        } catch (error) {
+            console.error('百度地图初始化失败:', error);
+            const mapContainer = document.getElementById('map');
+            if (mapContainer) {
+                mapContainer.innerHTML = `
+                    <div class="map-placeholder">
+                        <div style="font-size: 80px;">⚠️</div>
+                        <p>地图加载失败</p>
+                        <p style="font-size: 14px; margin-top: 10px;">请检查百度地图 AK 配置</p>
+                    </div>
+                `;
+            }
+        }
     }
-});
-</script>
+    </script>
 </body>
 </html>
