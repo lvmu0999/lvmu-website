@@ -273,6 +273,13 @@
             }
         }
     </style>
+    <!-- 高德地图 -->
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: 'YOUR_AMAP_SECURITY_CODE'
+        };
+    </script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=YOUR_AMAP_KEY"></script>
 </head>
 <body>
     <a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.zIndex='10000';this.style.background='#2e7d32';this.style.color='white';this.style.padding='10px 20px';">跳转到主要内容</a>
@@ -331,7 +338,15 @@
         <div class="contact-form-section">
             <h2>📝 在线留言</h2>
             <!-- Netlify 表单支持 -->
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" onsubmit="return handleFormSubmit(event)">
+            <!-- 
+    Formspree 配置说明：
+    1. 访问 https://formspree.io/ 注册免费账号
+    2. 创建新表单 (Create New Form)
+    3. 复制表单 ID (格式如：xvndrzqo)
+    4. 将下方的 YOUR_FORM_ID 替换为你的表单 ID
+    5. 设置表单接收邮箱为你的邮箱 (1131680431@qq.com)
+    -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" onsubmit="return handleFormspreeSubmit(event)">
                 <p style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field"></label>
                 </p>
@@ -405,10 +420,8 @@
 
     <!-- 表单提交处理 -->
     <script>
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        
-        // 获取表单数据
+    function handleFormspreeSubmit(event) {
+        // Formspree 会处理表单提交，我们只需要做验证
         const form = event.target;
         const name = form.name.value.trim();
         const phone = form.phone.value.trim();
@@ -419,26 +432,25 @@
         // 验证
         if (!name || !phone || !message) {
             alert('请填写必填项（姓名、电话、留言内容）');
+            event.preventDefault();
             return false;
         }
         
         if (phone && !/^[\d\-+()\s]+$/.test(phone)) {
             alert('请输入有效的电话号码');
+            event.preventDefault();
             return false;
         }
         
         if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             alert('请输入有效的邮箱地址');
+            event.preventDefault();
             return false;
         }
         
-        // 显示成功消息（实际部署时替换为真实提交逻辑）
-        alert('✅ 留言提交成功！\n\n我们将在 1-2 个工作日内与您联系。\n\n姓名：' + name + '\n电话：' + phone + '\n邮箱：' + (email || '未填写') + '\n公司：' + (company || '未填写') + '\n留言：' + message);
-        
-        // 重置表单
-        form.reset();
-        
-        return false;
+        // 验证通过，Formspree 会处理提交
+        // 提交后会跳转到 Formspree 的感谢页面
+        return true;
     }
     </script>
     
