@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="新源县绿牧农牧业开发科技有限公司 - 专业从事畜牧养殖、特色养殖、饲草种植、乳品加工、冷链物流、市场销售的现代化农牧业企业">
+    <meta name="keywords" content="绿牧农牧，新源县，畜牧养殖，特色养殖，饲草种植，乳品加工，冷链物流，农牧业，新疆，伊犁">
+    <meta name="author" content="新源县绿牧农牧业开发科技有限公司">
+    <meta name="robots" content="index, follow">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <title>新闻中心 - 新源县绿牧农牧业开发科技有限公司</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2e7d32;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            padding: 150px 50px 100px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .page-header p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+
+        .section {
+            padding: 80px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #2e7d32;
+            margin-bottom: 60px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .news-image {
+            height: 220px;
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+
+        .news-content {
+            padding: 30px;
+        }
+
+        .news-content h3 {
+            color: #2e7d32;
+            font-size: 22px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .news-date {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .news-date:before {
+            content: "📅";
+        }
+
+        .news-content p {
+            color: #666;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #1b5e20;
+        }
+
+        .read-more:after {
+            content: " →";
+        }
+
+        .footer {
+            background: #2e7d32;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-section p {
+            opacity: 0.9;
+            line-height: 2;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            .section {
+                padding: 50px 20px;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.zIndex='10000';this.style.background='#2e7d32';this.style.color='white';this.style.padding='10px 20px';">跳转到主要内容</a>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">🌿 绿牧农牧</a>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" style="display:none;background:none;border:none;font-size:24px;cursor:pointer;color:#2e7d32;" aria-label="菜单">☰</button>
+            <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="business.html">业务板块</a></li>
+            <li><a href="news.html">新闻中心</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <h1>新闻中心</h1>
+        <p>了解绿牧最新动态 · 关注行业发展</p>
+    </header>
+
+    <!-- 新闻列表 -->
+    <section class="section">
+        <h2 class="section-title">公司动态</h2>
+        
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-image">🏗️</div>
+                <div class="news-content">
+                    <h3>公司举行新牧场基地开工仪式</h3>
+                    <p class="news-date">2026 年 3 月 18 日</p>
+                    <p>新源县绿牧农牧业开发科技有限公司新牧场基地正式开工，标志着公司规模化养殖迈上新台阶。新基地占地面积 500 亩，设计养殖规模 5000 头...</p>
+                    <a href="javascript:void(0)" class="read-more" onclick="alert('📰 新闻详情页面开发中...\n\n如需查看完整新闻内容，请联系网站管理员。')">阅读更多</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">🏆</div>
+                <div class="news-content">
+                    <h3>公司产品荣获绿色食品认证</h3>
+                    <p class="news-date">2026 年 3 月 15 日</p>
+                    <p>公司生产的鲜奶、酸奶系列产品顺利通过国家绿色食品发展中心认证，获得绿色食品标志使用权。这是对公司产品质量的权威认可...</p>
+                    <a href="javascript:void(0)" class="read-more" onclick="alert('📰 新闻详情页面开发中...\n\n如需查看完整新闻内容，请联系网站管理员。')">阅读更多</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">🤝</div>
+                <div class="news-content">
+                    <h3>与多家商超达成战略合作</h3>
+                    <p class="news-date">2026 年 3 月 10 日</p>
+                    <p>公司与多家大型连锁商超签订战略合作协议，进一步拓宽产品销售渠道，提升品牌影响力。合作商超包括华润万家、永辉超市等...</p>
+                    <a href="javascript:void(0)" class="read-more" onclick="alert('📰 新闻详情页面开发中...\n\n如需查看完整新闻内容，请联系网站管理员。')">阅读更多</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">🔬</div>
+                <div class="news-content">
+                    <h3>引进智能化养殖管理系统</h3>
+                    <p class="news-date">2026 年 3 月 5 日</p>
+                    <p>公司投资引进智能化养殖管理系统，实现养殖环境自动监控、饲料精准投放、疫病早期预警等功能，大幅提升养殖效率和产品品质...</p>
+                    <a href="javascript:void(0)" class="read-more" onclick="alert('📰 新闻详情页面开发中...\n\n如需查看完整新闻内容，请联系网站管理员。')">阅读更多</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">🌱</div>
+                <div class="news-content">
+                    <h3>饲草料种植基地春耕备耕</h3>
+                    <p class="news-date">2026 年 3 月 1 日</p>
+                    <p>公司 1000 亩饲草料种植基地开始春耕备耕工作，今年计划种植青贮玉米 600 亩、紫花苜蓿 400 亩，为全年养殖饲料供应奠定基础...</p>
+                    <a href="javascript:void(0)" class="read-more" onclick="alert('📰 新闻详情页面开发中...\n\n如需查看完整新闻内容，请联系网站管理员。')">阅读更多</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">👥</div>
+                <div class="news-content">
+                    <h3>举办农牧民技术培训会</h3>
+                    <p class="news-date">2026 年 2 月 25 日</p>
+                    <p>公司联合县畜牧局举办农牧民技术培训会，邀请专家讲授科学养殖技术、疫病防控知识，帮助周边农牧民提高养殖水平，增加收入...</p>
+                    <a href="javascript:void(0)" class="read-more" onclick="alert('📰 新闻详情页面开发中...\n\n如需查看完整新闻内容，请联系网站管理员。')">阅读更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+        </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>📍 公司地址</h3>
+                <p>新疆伊犁州新源县则克台镇工业园区</p>
+                <p>邮编：835800</p>
+            </div>
+            <div class="footer-section">
+                <h3>📞 联系方式</h3>
+                <p>电话：0999-5036228</p>
+                <p>邮箱：contact@lvmu.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>⏰ 营业时间</h3>
+                <p>周一至周五：9:00 - 20:00</p>
+                <p>周六至周日：休息</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2014-2026 新源县绿牧农牧业开发科技有限公司 版权所有</p>
+        </div>
+    </footer>
+
+    <!-- 引入语音朗读脚本 -->
+    <script src="voice-reader.js"></script>
+<script>
+// 移动端菜单切换
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) {
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+}
+
+// 显示移动端菜单按钮
+window.addEventListener('resize', () => {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    if (window.innerWidth <= 768) {
+        if (mobileBtn) mobileBtn.style.display = 'block';
+    } else {
+        if (mobileBtn) mobileBtn.style.display = 'none';
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks) navLinks.style.display = 'flex';
+    }
+});
+
+// 初始化检查
+window.addEventListener('DOMContentLoaded', () => {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    if (window.innerWidth <= 768 && mobileBtn) {
+        mobileBtn.style.display = 'block';
+    }
+});
+</script>
+</body>
+</html>

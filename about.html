@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="新源县绿牧农牧业开发科技有限公司 - 专业从事畜牧养殖、特色养殖、饲草种植、乳品加工、冷链物流、市场销售的现代化农牧业企业">
+    <meta name="keywords" content="绿牧农牧，新源县，畜牧养殖，特色养殖，饲草种植，乳品加工，冷链物流，农牧业，新疆，伊犁">
+    <meta name="author" content="新源县绿牧农牧业开发科技有限公司">
+    <meta name="robots" content="index, follow">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <title>关于我们 - 新源县绿牧农牧业开发科技有限公司</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2e7d32;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            padding: 150px 50px 100px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .page-header p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+
+        .section {
+            padding: 80px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #2e7d32;
+            margin-bottom: 50px;
+        }
+
+        .content-card {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .content-card h2 {
+            color: #2e7d32;
+            margin-bottom: 25px;
+            font-size: 28px;
+            border-left: 4px solid #2e7d32;
+            padding-left: 20px;
+        }
+
+        .content-card h3 {
+            color: #2e7d32;
+            margin: 30px 0 15px;
+            font-size: 22px;
+        }
+
+        .content-card p {
+            margin-bottom: 20px;
+            text-indent: 2em;
+        }
+
+        .content-card ul {
+            margin: 20px 0 20px 40px;
+        }
+
+        .content-card li {
+            margin-bottom: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .team-photo {
+            height: 200px;
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-info h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .team-info p {
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            background: #2e7d32;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-section p {
+            opacity: 0.9;
+            line-height: 2;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            .section {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.zIndex='10000';this.style.background='#2e7d32';this.style.color='white';this.style.padding='10px 20px';">跳转到主要内容</a>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">🌿 绿牧农牧</a>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" style="display:none;background:none;border:none;font-size:24px;cursor:pointer;color:#2e7d32;" aria-label="菜单">☰</button>
+            <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="business.html">业务板块</a></li>
+            <li><a href="news.html">新闻中心</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <h1>关于我们</h1>
+        <p>走进绿牧 · 了解绿牧 · 信任绿牧</p>
+    </header>
+
+    <!-- 公司简介 -->
+    <section class="section">
+        <div class="content-card">
+            <h2>公司概况</h2>
+            <p>新源县绿牧农牧业开发科技有限公司成立于 2014 年，位于新疆伊犁哈萨克自治州新源县 72 团农业产业园。公司是一家集畜牧养殖、饲草种植、农产品加工、冷链物流、市场销售于一体的现代化农牧业科技企业。</p>
+            
+            <p>公司依托新源县得天独厚的自然资源和生态环境，致力于发展绿色、生态、高效的现代农牧业，为消费者提供安全、健康、优质的农牧产品。</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">150000+</div>
+                    <div class="stat-label">养殖规模（头/只）</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">饲草基地（亩）</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">专业员工</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1000 万</div>
+                    <div class="stat-label">注册资金（元）</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2>企业文化</h2>
+            
+            <h3>🎯 企业使命</h3>
+            <p>发展绿色生态农牧业，为消费者提供安全健康的优质产品，带动当地农牧民增收致富，促进乡村振兴。</p>
+
+            <h3>👁️ 企业愿景</h3>
+            <p>成为新疆地区领先的现代化农牧业企业，打造绿色农牧产品知名品牌，推动农牧业可持续发展。</p>
+
+            <h3>💎 核心价值观</h3>
+            <ul>
+                <li><strong>诚信</strong> - 诚信经营，品质至上</li>
+                <li><strong>创新</strong> - 科技创新，追求卓越</li>
+                <li><strong>责任</strong> - 社会责任，绿色发展</li>
+                <li><strong>共赢</strong> - 合作共赢，共同发展</li>
+            </ul>
+
+            <h3>🌱 经营理念</h3>
+            <ul>
+                <li>坚持生态优先，绿色发展</li>
+                <li>坚持科技兴农，品质兴企</li>
+                <li>坚持客户至上，服务第一</li>
+                <li>坚持合作共赢，共同发展</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>发展历程</h2>
+            
+            <h3>📅 2014 年 3 月</h3>
+            <p>公司正式成立，注册资金 1000 万元，启动新牧场基地建设项目。</p>
+
+            <h3>📅 2014 年 -2026 年</h3>
+            <p>稳步发展，与多家大型连锁商超签订战略合作协议，建立稳定的销售渠道。</p>
+
+            <h3>📅 2026 年</h3>
+            <p>公司鲜奶、酸奶系列产品通过国家绿色食品认证，获得绿色食品标志使用权。</p>
+
+            <h3>📅 未来规划</h3>
+            <p>公司计划在未来 3 年内，扩大养殖规模至 200000 头（只），建设现代化乳品加工厂，打造完整的农牧业产业链，成为新疆地区知名的绿色农牧产品供应商。</p>
+        </div>
+
+        <div class="content-card">
+            <h2>管理团队</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">👨‍💼</div>
+                    <div class="team-info">
+                        <h3>总经理</h3>
+                        <p>负责企业战略规划</p>
+                        <p>10 年 + 农牧业管理经验</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">👨‍🔬</div>
+                    <div class="team-info">
+                        <h3>技术总监</h3>
+                        <p>负责养殖技术研发</p>
+                        <p>畜牧兽医专业硕士</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">👩‍💼</div>
+                    <div class="team-info">
+                        <h3>运营总监</h3>
+                        <p>负责日常运营管理</p>
+                        <p>8 年 + 企业运营经验</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">👨‍💼</div>
+                    <div class="team-info">
+                        <h3>销售总监</h3>
+                        <p>负责市场开拓销售</p>
+                        <p>10 年 + 市场营销经验</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>📍 公司地址</h3>
+                <p>新疆伊犁州新源县则克台镇工业园区</p>
+                <p>邮编：835800</p>
+            </div>
+            <div class="footer-section">
+                <h3>📞 联系方式</h3>
+                <p>电话：0999-5036228</p>
+                <p>邮箱：contact@lvmu.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>⏰ 营业时间</h3>
+                <p>周一至周五：9:00 - 20:00</p>
+                <p>周六至周日：休息</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2014-2026 新源县绿牧农牧业开发科技有限公司 版权所有</p>
+        </div>
+    </footer>
+
+    <!-- 引入语音朗读脚本 -->
+    <script src="voice-reader.js"></script>
+<script>
+// 移动端菜单切换
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) {
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+}
+
+// 显示移动端菜单按钮
+window.addEventListener('resize', () => {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    if (window.innerWidth <= 768) {
+        if (mobileBtn) mobileBtn.style.display = 'block';
+    } else {
+        if (mobileBtn) mobileBtn.style.display = 'none';
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks) navLinks.style.display = 'flex';
+    }
+});
+
+// 初始化检查
+window.addEventListener('DOMContentLoaded', () => {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    if (window.innerWidth <= 768 && mobileBtn) {
+        mobileBtn.style.display = 'block';
+    }
+});
+</script>
+</body>
+</html>
